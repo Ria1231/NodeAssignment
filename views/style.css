@@ -30,7 +30,9 @@ td {
     font-size: 16px;
     margin: 10px;
 }
-
+#update{
+    display: none;
+}
 #message {
     font-size: 20px;
     font-weight: bold;

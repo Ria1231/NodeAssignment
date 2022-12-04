@@ -1,0 +1,16 @@
+GET http://localhost:8000/apiv2.0/teacher/
+###
+
+GET http://localhost:8000/apiv2.0/teacher/63671b021e17e25c75de217
+###
+
+PUT http://localhost:8000/apiv2.0/teacher/63671b021e17e25c75de2173
+Content-Type: application/json
+
+{
+    "name":"Rp",
+    "gender": "female",
+    "email": "riya.ops@gmail.com",
+    "mobile":"1234567890"
+}
+###

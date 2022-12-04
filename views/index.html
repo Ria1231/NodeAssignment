@@ -17,19 +17,19 @@
             <form class="form-vertical" onsubmit="event.preventDefault()">
                 <div class="form-group">
                     <div class="formData">
+                        <input type="hidden" class="form-control" id="studentID" value="">
+
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
                         <br>
                         <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
                         <br>
-                        <input type="email" class="form-control" name="mobile" id="mobile"
-                            placeholder="Enter Mobile No">
+                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter Mobile No">
                         <br>
                         <label class="radio-inline"><input type="radio" name="radio" id="male">Male</label>
                         <label class="radio-inline"><input type="radio" name="radio" id="female">Female</label>
                         <br>
-                        <!-- <input type="button" onclick="formSubmit()" class="btn btn-primary" id="submit" value="Submit"> -->
-                        <button class="btn btn-primary" onclick="formSubmit()">Submit</button>
-
+                        <button class="btn btn-primary" id="submit" onclick="formSubmit()">Submit</button>
+                        <button class="btn btn-primary" id="update" onclick="updateData()">Update</button>
                         <button class="btn btn-info" onclick="renderData()">Render Data</button>
 
                     </div>
