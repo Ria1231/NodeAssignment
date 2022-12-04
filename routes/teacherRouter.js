@@ -54,6 +54,7 @@ router.get("/delete/:id", async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   const id = req.params.id;
+  //VALIDATE ID 
   if (!mongoose.Types.ObjectId.isValid(id)) return res.send('Not a Valid Id');
   const data = await teacherModel.findById(id);
   if (data) return res.send(data);
@@ -65,9 +66,13 @@ router.put('/:id', async (req, res) => {
   const gender = req.body.gender;
   const email = req.body.email;
   const mobile = req.body.mobile;
+
+  //VALIDATE ID 
   if (!mongoose.Types.ObjectId.isValid(_id)) return res.send('Not a Valid Id');
+  //CHECK IF ID EXISTS OR NOT
   const isExists = await teacherModel.findById(_id);
   if (isExists) {
+    //UPDATE DATA
     const update = await teacherModel.update({ _id }, { name, gender, email, mobile });
     if (update) return res.send({ message: "Student Data Updated.." });
   }
